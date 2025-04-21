@@ -2,12 +2,14 @@ package com.pularlsight;
 
 public class CellPhone {
 
+    // traits of cellphone
     private int serialNumber;
     private String model;
     private String carrier;
     private String phoneNumber;
     private String owner;
 
+    // constructor
     public CellPhone() {
         this.serialNumber = 0;
         this.model = "";
@@ -16,6 +18,7 @@ public class CellPhone {
         this.owner = "";
     }
 
+    //getters and setters
     public int getSerialNumber() {
         return serialNumber;
     }
@@ -55,4 +58,12 @@ public class CellPhone {
     public void setOwner(String owner) {
         this.owner = owner;
     }
+
+    //dial method
+    public void  dial(String phoneNumber) {
+
+        System.out.println(owner + "'s phone is calling " + phoneNumber);
+
+    }
+
 }
