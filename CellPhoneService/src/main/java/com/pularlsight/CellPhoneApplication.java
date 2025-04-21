@@ -58,6 +58,11 @@ public class CellPhoneApplication {
         System.out.println("Who is owner of this phone?: ");
         myPhone2.setOwner(userInfo.nextLine());
 
+        //phone #3
+        CellPhone myPhone3 = new CellPhone(1234567, "Pear", "att", "214-123-1234", "me");
+
+
+
          // prints out the display from the method
         System.out.println("\n --- Phone 1 ---");
         display(myPhone);
@@ -65,12 +70,18 @@ public class CellPhoneApplication {
         System.out.println("\n --- Phone 2 ---");
         display(myPhone2);
 
+        System.out.println("\n --- Phone 3 ---");
+        display(myPhone3);
+
         // prints out the dial method from cellphone class
         System.out.println();
-        myPhone.dial(myPhone.getPhoneNumber());
+        myPhone.dial(myPhone2.getPhoneNumber());
 
         System.out.println();
-        myPhone.dial(myPhone2.getPhoneNumber());
+        myPhone2.dial(myPhone.getPhoneNumber());
+
+        System.out.println();
+        myPhone3.dial(myPhone.getPhoneNumber());
 
     }
 

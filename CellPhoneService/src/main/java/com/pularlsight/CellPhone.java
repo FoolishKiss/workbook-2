@@ -18,6 +18,16 @@ public class CellPhone {
         this.owner = "";
     }
 
+    //overloading the default constructor to have one with a bigger signature
+    public CellPhone(int sn, String model, String carrier, String phoneNumber, String owner){
+        this.serialNumber = sn;
+        this.model = model;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.owner = owner;
+
+    }
+
     //getters and setters
     public int getSerialNumber() {
         return serialNumber;
@@ -62,7 +72,7 @@ public class CellPhone {
     //dial method
     public void  dial(String phoneNumber) {
 
-        System.out.println(owner + "'s phone is calling " + phoneNumber);
+        System.out.println(this.getOwner() + "'s phone is calling " + phoneNumber);
 
     }
 
